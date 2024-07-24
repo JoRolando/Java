@@ -1,0 +1,22 @@
+public class prime{
+	public static void main(String[] args){
+		int upper=50,lower=13,i,z=0;
+		for(i=lower;i<=upper;i++)
+		{
+		    z=0;
+			for(int j=1;j<=i;j++)
+			{
+				if(i%j==0)
+				{
+					z=z+1;
+				}
+			}
+			if(z==2)
+			{
+				System.out.println(i);
+			}	
+		}
+		
+
+	}
+}
