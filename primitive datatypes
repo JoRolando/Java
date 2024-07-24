@@ -1,0 +1,15 @@
+public class java{
+	static byte BYTE;
+	static char CHAR= '0';
+	static int INT;
+	static float FLOAT;
+	static double DOUBLE;
+	public static void main(String[] args)
+	{
+		System.out.println("byte :"+BYTE);
+		System.out.println("char : "+CHAR);
+		System.out.println("float : "+FLOAT);
+		System.out.println("int : "+INT);
+		System.out.println("double : "+DOUBLE);
+	}
+}
