@@ -1,0 +1,62 @@
+// binary search
+import java.util.*;
+
+public class binary
+{
+	 static int binary_search(int a[],int left,int right,int key)
+	{
+		while(left<=right)
+		{
+			int mid=(left+right)/2;
+			if(a[mid]==key)
+			{
+				return mid+1;	
+			 //System.out.println("element found at position = "+(mid+1));
+			 //break;                                                                          
+			}
+			else if (key<a[mid])
+			{
+				right=mid-1;
+			}
+			else
+			{
+				left=mid+1;
+			}
+		}
+		return 0;
+		/*if(right<left)
+		{
+			System.out.println(" ARGHHHH!!!!!!!!!ELEMENT NOT FOUND. NOT BECAUSE I'M INCAPABLE BUT BECAUSE YOU DID NOT INPUT 														^_^");
+		}*/
+		
+	}
+	public static void main(String[] args)
+	{
+		int left,right,i;
+		System.out.println("ENTER ARRAY SIZE:  ");
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		//System.out.println(n);
+		int a[]=new int[n];
+		System.out.println("ENTER ARRAY VALUES:   ");
+		for(i=0;i<n;i++)
+		{
+			a[i] = in.nextInt();
+			System.out.println("NEXT --");
+		}
+		System.out.println(" NICE!!!  ");
+		left=0;
+		right=n-1;
+		System.out.print("NOW, ENTER THE KEY ELEMENT TO SEARCH:  ");		
+		int key = in.nextInt();
+		int pos = binary_search(a,left,right,key);
+		if(pos==0)
+		{
+			System.out.println(" ARGHHHH!!!!!!!!!ELEMENT NOT FOUND. NOT BECAUSE I'M INCAPABLE BUT BECAUSE YOU DID NOT INPUT 														^_^");
+		}
+		else
+		{
+			System.out.println("element found at position = "+(pos));
+		}
+	}
+}
