@@ -1,0 +1,16 @@
+//array 3D
+class array3{
+	public static void main (String[] args){
+		int arr[][][] = new int[][][] {{{10,20,30},{40,50,60},{70,80,90}},{{432,245,234},{245,245,256},{58,2435,1234}},{{1324,1342,134},{2345,245,564},{143,653,9867}}};
+		for (int i=0 ;i<arr.length;i++){
+			for(int j=0;j<arr[0].length;j++){
+				for(int k=0;k<arr[1].length;k++){
+				System.out.print(arr[i][j][k] + "  ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+}
