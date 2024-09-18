@@ -1,0 +1,21 @@
+import java.util.*;
+ class animal{
+ 		void eat(){
+ 			System.out.println("is eating");
+ 		}
+}
+
+class buff extends animal{
+	void speak(){
+		System.out.println("says maaaayyyyy");
+	}
+}  
+ 
+ public class inheritance_{
+ 	public static void main(String[] args)
+ 	{
+ 		buff an= new buff();
+ 		an.eat();
+ 		an.speak();	
+ 	}
+ }
