@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class animal{
+	String name;
+	animal(String name){
+		this.name = name;
+	}
+	void eat(){
+		System.out.println(name + "Animal eats");
+	}
+}
+
+class Dog extends animal{
+	String name;
+	Dog(String name)
+	{
+		super(name);
+		this.name = name;
+	}
+	void bark(){
+		System.out.println(name + "  dog says bow bow  ");
+	}
+}
+class cat extends animal{
+	cat(String name)
+	{
+		super(name);
+		this.name = name;
+	}
+	void meow(){
+		System.out.println(name + "  cat says meow meow");
+	}
+}
+
+public class hirarchial{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		String name = sc.nextLine();
+		animal a = new animal(name);
+		Dog d = new Dog(name);
+		cat c = new cat(name);
+		c.eat();
+		c.meow();
+		d.eat();
+		d.bark();
+	}
+}
