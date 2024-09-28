@@ -1,0 +1,50 @@
+interface shape{
+    double getArea();
+    
+}
+class rectangle implements shape{
+    double width;
+    double height;
+    rectangle(double width, double height){
+        this.width = width;
+        this.height = height;
+    }
+    
+    public double getArea(){
+        return width*height;
+    }
+}
+
+class circle implements shape{
+    double radius;
+    circle(double radius){
+        this.radius= radius;
+    }
+    public double getArea(){
+        return Math.PI*radius*radius;
+    }
+}
+
+class triangle implements shape{
+    double base;
+    double height;
+    triangle(double base, double height){
+        this.base = base;
+        this.height = height;
+    }
+    public double getArea(){
+        return 0.5*base*height;
+    }
+}
+
+public class main{
+    public static void main(String[] args){
+        shape r = new rectangle(2.0,4.0);
+        System.out.println("Rectangle Area = " + r.getArea());
+        shape c = new circle(7.0);
+        System.out.println("Circle Area = " + c.getArea());
+        shape t = new triangle(2.0,4.0);
+        System.out.println("triangle Area = " + t.getArea());
+        
+    }
+}
