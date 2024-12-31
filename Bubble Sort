@@ -1,0 +1,28 @@
+import java.util.*;
+class bubble {
+  public static void main(String [] args){
+		Scanner in =new Scanner(System.in);
+		System.out.print("Enter size of an Array: ");
+		int num=in.nextInt();
+		int [] arr=new int[num];
+		System.out.println("Enter Elements :");
+		for(int i=0;i<num;i++){
+			arr[i]=in.nextInt();
+		}
+		bubblesort(num,arr);
+		System.out.println("SORTED ARRAY:");
+		for(int i=0;i<num;i++)
+			System.out.print(arr[i] +" ");
+	}
+	static void bubblesort( int n,int a []) {
+		for(int i=0;i<n-1;i++){
+			for(int j=0;j<n-i-1;j++){
+				if(a[j+1]<a[j]){
+					int temp=a[j];
+					a[j]=a[j+1];
+					a[j+1]=temp;
+				}
+			}
+		}
+	}
+} 
