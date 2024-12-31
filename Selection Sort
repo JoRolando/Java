@@ -1,0 +1,29 @@
+import java.util.*;
+class select {
+	public static void main(String [] args){
+		Scanner in =new Scanner(System.in);
+		System.out.print("ENTER ARRAY SIZE: ");
+		int num=in.nextInt();
+		int [] arr=new int[num];
+		for(int i=0;i<num;i++){
+		System.out.println("ENTER THE A[" + i + "] ");
+			arr[i]=in.nextInt();
+		}
+		selectionsort(num,arr);
+		System.out.print("SORTED ARRAY: ");
+		for(int i=0;i<num;i++)
+			System.out.print(arr[i] +" ");
+	}
+	static void selectionsort(int n, int a[]){
+		for(int i=0;i<n-1;i++){
+			int min=i;
+			for(int j=i+1;j<n;j++){
+				if(a[j]<a[min])
+					min=j;
+			}
+			int temp=a[i];
+			a[i]=a[min];
+			a[min]=temp;
+		}
+	}
+}
